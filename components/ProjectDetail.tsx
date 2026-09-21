@@ -1,13 +1,14 @@
 import Link from "next/link";
 import PageFrame from "./PageFrame";
 import type { Project } from "@/lib/site-data";
+import ParallaxImage from "./ParallaxImage";
 
 export default function ProjectDetail({ project }: { project: Project }) {
   return (
     <PageFrame>
       <main className="inner-page">
         <section className="project-hero">
-          <img src={project.hero} alt={`${project.name} architectural render`} />
+          <ParallaxImage className="project-hero-media" src={project.hero} alt={`${project.name} architectural render`} />
           <div className="project-hero-shade" />
           <div className="project-hero-copy"><p>{project.type}</p><h1>{project.name}</h1><span>{project.location}</span></div>
         </section>
@@ -19,7 +20,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
           <div><span>Typology</span><strong>{project.type}</strong></div><div><span>Location</span><strong>{project.location}</strong></div><div><span>Information</span><strong>Brochure available</strong></div>
         </section>
         <section className="project-architecture">
-          <div className="project-architecture-image"><img src={project.square} alt={`${project.name} architectural detail`} /></div>
+          <div className="project-architecture-image"><ParallaxImage className="project-detail-parallax" src={project.square} alt={`${project.name} architectural detail`} /></div>
           <div className="project-architecture-copy"><p className="section-index">Architecture</p><h2>Material, light<br />and <em>everyday life.</em></h2><p>The supplied architectural renders show a language of warm brick, carefully framed openings, shaded thresholds and landscape woven into the arrival experience.</p><a className="solid-button" href={project.brochure} target="_blank">View brochure <span>↗</span></a></div>
         </section>
         <section className="project-enquire"><p>Experience it in person.</p><h2>Walk through<br /><em>{project.name}.</em></h2><Link className="outline-button" href="/contact">Book a visit <span>↗</span></Link></section>

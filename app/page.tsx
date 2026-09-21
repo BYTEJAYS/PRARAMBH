@@ -2,6 +2,7 @@ import Link from "next/link";
 import PageFrame from "@/components/PageFrame";
 import IntroOverlay from "@/components/IntroOverlay";
 import BlueprintReveal from "@/components/BlueprintReveal";
+import ParallaxImage from "@/components/ParallaxImage";
 import { galleryImages, projects } from "@/lib/site-data";
 
 export default function Home() {
@@ -10,7 +11,7 @@ export default function Home() {
       <IntroOverlay />
       <main>
         <section className="hero" aria-labelledby="hero-title">
-          <img className="hero-image" src="/assets/build3.png" alt="PRARAMBH residential architecture at golden hour" />
+          <ParallaxImage className="hero-image hero-parallax" src="/assets/build3.png" alt="PRARAMBH residential architecture at golden hour" />
           <div className="hero-shade" />
           <div className="hero-kicker"><span>01</span> Vadodara, Gujarat</div>
           <div className="hero-copy">
@@ -33,7 +34,7 @@ export default function Home() {
         </section>
 
         <section className="story-split">
-          <div className="story-image"><img src="/assets/buildsquare1.jpeg" alt="Prarambh 51 entrance architecture" /><span>Architecture rooted in place</span></div>
+          <div className="story-image"><ParallaxImage className="story-parallax" src="/assets/buildsquare1.jpeg" alt="Prarambh 51 entrance architecture" /><span>Architecture rooted in place</span></div>
           <div className="story-copy"><p className="section-index">03 — Real estate as craft</p><h2>Every project begins with a simple belief.</h2><p>The spaces we build become part of people’s lives. That responsibility asks for care at every scale — from the first line on paper to the feeling of arriving home.</p><Link className="text-link" href="/about">Discover our approach <span>↗</span></Link></div>
         </section>
 
