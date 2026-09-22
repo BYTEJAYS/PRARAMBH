@@ -192,9 +192,17 @@ h2, h3, p { text-wrap: pretty; }
 .principles-grid li > span { color: var(--gold); font-size: 11px; letter-spacing: .15em; }
 .principles-grid h3 { margin: 0 0 12px; font-family: Georgia, serif; font-size: 32px; font-weight: 400; }
 .principles-grid p { margin: 0; max-width: 550px; color: rgba(23,59,53,.72); line-height: 1.6; }
-.testimonial-placeholder { padding: 140px 12vw; background: var(--ivory); text-align: center; }
-.testimonial-placeholder blockquote { max-width: 1050px; margin: 55px auto 35px; font-family: Georgia, serif; font-size: clamp(3rem, 5.5vw, 6rem); line-height: 1.02; letter-spacing: -.04em; }
-.testimonial-placeholder > p:last-child { color: rgba(23,59,53,.52); font-size: 12px; letter-spacing: .1em; text-transform: uppercase; }
+.testimonial-wall { min-height: 150svh; padding: 122px 4vw 38px; background: var(--deep); color: white; }
+.testimonial-columns { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; height: calc(150svh - 160px); overflow: hidden; mask-image: linear-gradient(to bottom, transparent, black 10%, black 90%, transparent); }
+.testimonial-column { min-width: 0; }
+.resident-story-card { position: relative; min-height: 244px; padding: 31px 29px 27px; border: 1px solid rgba(219,194,146,.38); background: rgba(4,35,31,.74); }
+.resident-story-card > p { position: relative; z-index: 1; margin: 0; color: rgba(255,255,255,.85); font-family: Georgia, serif; font-size: 16px; line-height: 1.48; }
+.resident-story-quote { position: absolute; top: 14px; right: 19px; color: rgba(219,194,146,.22); font-family: Georgia, serif; font-size: 90px; line-height: .7; }
+.resident-story-card footer { display: flex; align-items: center; gap: 11px; margin-top: 23px; }
+.resident-story-card footer img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; filter: saturate(.72); }
+.resident-story-card footer span { display: grid; gap: 3px; }
+.resident-story-card footer b, .resident-story-card footer small { font-size: 10px; font-weight: 400; letter-spacing: .11em; text-transform: uppercase; }
+.resident-story-card footer small { color: rgba(255,255,255,.47); font-size: 8px; }
 .final-cta { display: flex; min-height: 820px; padding: 130px 8vw; flex-direction: column; justify-content: center; align-items: flex-start; background: var(--deep); color: white; }
 .final-cta h2 { margin: 50px 0 28px; font-family: Georgia, serif; font-size: clamp(5rem, 9vw, 10rem); font-weight: 400; line-height: .82; letter-spacing: -.055em; }
 .final-cta h2 em { color: #d7c29b; font-weight: 400; }
@@ -347,6 +355,8 @@ h2, h3, p { text-wrap: pretty; }
   .about-manifesto .section-index, .philosophy .section-index { grid-column: 1 / -1; }
   .archive-project { grid-template-columns: 55px 1fr 230px; }
   .archive-project b { display: none; }
+  .testimonial-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .testimonial-column-4 { display: none; }
 }
 
 @media (max-width: 760px) {
@@ -408,4 +418,8 @@ h2, h3, p { text-wrap: pretty; }
   .site-footer { gap: 45px; padding: 75px 22px 28px; }
   .footer-bottom { gap: 12px; flex-direction: column; margin-top: 20px; }
   .floating-enquire { right: 14px; bottom: 14px; }
+  .testimonial-wall { padding: 88px 16px 18px; }
+  .testimonial-columns { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; height: calc(150svh - 106px); }
+  .testimonial-column-3 { display: none; }
+  .resident-story-card { min-height: 220px; padding: 28px 24px; }
 }

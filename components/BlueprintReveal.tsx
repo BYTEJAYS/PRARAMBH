@@ -25,11 +25,9 @@ export default function BlueprintReveal() {
           <div className="blueprint-grid" />
         </div>
         <div className="blueprint-copy">
-          <p className="section-index">08 — Signature study</p>
           <h2>From line.<br /><em>To life.</em></h2>
           <div className="blueprint-meter"><span style={{ width: `${progress * 100}%` }} /></div>
           <p>Every home begins as a measured idea. Scroll to move from architectural intent to a place made for living.</p>
-          <Link className="text-link" href="/projects/prarambh-pride">Explore Prarambh Pride <span>↗</span></Link>
         </div>
       </div>
     </section>

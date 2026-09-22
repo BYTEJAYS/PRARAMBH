@@ -2,7 +2,7 @@ import PageFrame from "@/components/PageFrame";
 
 export default function ContactPage() {
   return <PageFrame><main className="inner-page contact-page">
-    <section className="contact-intro"><p className="section-index">A new beginning</p><h1>Let’s talk about<br /><em>your next space.</em></h1><p>Whether you are exploring a home or a commercial address, begin with a conversation.</p></section>
+    <section className="contact-intro"><h1>Let’s talk about<br /><em>your next space.</em></h1><p>Whether you are exploring a home or a commercial address, begin with a conversation.</p></section>
     <section className="contact-grid section-pad">
       <form className="contact-form" action="mailto:inframr02@gmail.com" method="post" encType="text/plain">
         <label><span>01</span>Name<input name="name" autoComplete="name" placeholder="Your name" required /></label>
