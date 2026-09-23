@@ -335,11 +335,13 @@ h2, h3, p { text-wrap: pretty; }
 .inquiry-form input, .inquiry-form select { border: 0; border-bottom: 1px solid rgba(23,59,53,.3); padding: 10px 0; outline: none; background: transparent; color: var(--ink); font-family: Georgia, serif; font-size: 17px; }
 
 /* Footer */
-.site-footer { display: grid; grid-template-columns: 1fr .45fr .75fr; gap: 8vw; padding: 90px 7vw 30px; background: #061d1a; color: white; }
+.site-footer { display: grid; grid-template-columns: .8fr 1.2fr .8fr; gap: 6vw; padding: 90px 7vw 30px; background: #061d1a; color: white; }
 .footer-mark img { width: 130px; height: 130px; object-fit: contain; }
 .footer-mark p { color: rgba(255,255,255,.58); font-family: Georgia, serif; font-size: 18px; }
-.footer-links, .footer-contact { display: grid; align-content: start; gap: 11px; }
-.footer-links p, .footer-contact p { margin: 0 0 18px; color: var(--gold); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
+.footer-links { display: flex; align-items: baseline; gap: 28px; flex-wrap: wrap; }
+.footer-contact { display: grid; align-content: start; gap: 11px; }
+.footer-links p, .footer-contact p { margin: 0; color: var(--gold); font-size: 10px; letter-spacing: .18em; text-transform: uppercase; }
+.footer-contact p { margin-bottom: 18px; }
 .footer-links a, .footer-contact a, .footer-contact span { width: max-content; color: rgba(255,255,255,.72); font-size: 14px; line-height: 1.45; }
 .footer-links a:hover, .footer-contact a:hover { color: var(--gold); }
 .footer-bottom { grid-column: 1 / -1; display: flex; justify-content: space-between; margin-top: 70px; padding-top: 24px; border-top: 1px solid rgba(255,255,255,.12); color: rgba(255,255,255,.4); font-size: 9px; letter-spacing: .16em; text-transform: uppercase; }
