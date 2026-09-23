@@ -27,7 +27,6 @@ export default function Header() {
       >
         <Link className="brand" href="/" aria-label="PRARAMBH GROUP home" onClick={close}>
           <img src="/assets/logo.png" alt="" />
-          <span>PRARAMBH<br />GROUP</span>
         </Link>
         <nav aria-label="Main navigation">
           <Link href="/projects">Projects</Link><Link href="/about">About</Link><Link href="/testimonials">Stories</Link><Link href="/team">Team</Link><Link href="/gallery">Gallery</Link><Link href="/contact">Contact</Link>

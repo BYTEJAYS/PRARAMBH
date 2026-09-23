@@ -9,6 +9,9 @@ export type Project = {
   brochure: string;
   accent: string;
   detail: string;
+  featureLabel?: string;
+  featureTitle?: string;
+  featureDetail?: string;
 };
 
 export const projects: Project[] = [
@@ -37,6 +40,21 @@ export const projects: Project[] = [
     detail: "A measured architectural rhythm creates privacy, openness and a strong sense of neighbourhood.",
   },
   {
+    slug: "prarambh-pragati",
+    name: "Prarambh Pragati",
+    type: "3 BHK Lavish Duplex",
+    location: "Alva Road, Waghodia Road, Vadodara",
+    description: "A generous duplex community designed around comfort, landscaped gathering spaces and a fuller way of living.",
+    hero: "/assets/prarambh-pragati-homes.jpg",
+    square: "/assets/prarambh-pragati-amenities.jpg",
+    brochure: "/assets/prarambh-pragati-brochure.pdf",
+    accent: "03",
+    detail: "Fifty-three residences are arranged around a landscaped common plot, bringing private family homes and shared recreation into one considered neighbourhood.",
+    featureLabel: "Amenities",
+    featureTitle: "Space to gather and slow down.",
+    featureDetail: "A lotus pond, multi-storey clubhouse, swimming pool, gym, library, gazebo, children's play area and senior seating create room for every generation.",
+  },
+  {
     slug: "prarambh-plaza",
     name: "Prarambh Plaza",
     type: "Mixed-use Development",
@@ -45,7 +63,7 @@ export const projects: Project[] = [
     hero: "/assets/build4.png",
     square: "/assets/buildsquare4.jpeg",
     brochure: "/assets/brochure-4.pdf",
-    accent: "03",
+    accent: "04",
     detail: "A street-facing commercial base anchors a disciplined residential facade above.",
   },
 ];
@@ -53,8 +71,10 @@ export const projects: Project[] = [
 export const galleryImages = [
   { src: "/assets/build3.png", project: "Prarambh 51", category: "Architecture" },
   { src: "/assets/buildsquare2.jpeg", project: "Prarambh Pride", category: "Arrival" },
+  { src: "/assets/prarambh-pragati-homes.jpg", project: "Prarambh Pragati", category: "Architecture" },
   { src: "/assets/build4.png", project: "Prarambh Plaza", category: "Architecture" },
   { src: "/assets/build2.png", project: "Prarambh Pride", category: "Landscape" },
+  { src: "/assets/prarambh-pragati-amenities.jpg", project: "Prarambh Pragati", category: "Amenities" },
   { src: "/assets/buildsquare1.jpeg", project: "Prarambh 51", category: "Arrival" },
   { src: "/assets/buildsquare4.jpeg", project: "Prarambh Plaza", category: "Architecture" },
 ];

@@ -21,7 +21,7 @@ export default function ProjectDetail({ project }: { project: Project }) {
         </section>
         <section className="project-architecture">
           <div className="project-architecture-image"><ParallaxImage className="project-detail-parallax" src={project.square} alt={`${project.name} architectural detail`} /></div>
-          <div className="project-architecture-copy"><p className="section-index">Architecture</p><h2>Material, light<br />and <em>everyday life.</em></h2><p>The supplied architectural renders show a language of warm brick, carefully framed openings, shaded thresholds and landscape woven into the arrival experience.</p><a className="solid-button" href={project.brochure} target="_blank">View brochure <span>↗</span></a></div>
+          <div className="project-architecture-copy"><p className="section-index">{project.featureLabel ?? "Architecture"}</p><h2>{project.featureTitle ? project.featureTitle : <>Material, light<br />and <em>everyday life.</em></>}</h2><p>{project.featureDetail ?? "The supplied architectural renders show a language of warm brick, carefully framed openings, shaded thresholds and landscape woven into the arrival experience."}</p><a className="solid-button" href={project.brochure} target="_blank" rel="noreferrer">View brochure <span>↗</span></a></div>
         </section>
         <section className="project-enquire"><p>Experience it in person.</p><h2>Walk through<br /><em>{project.name}.</em></h2><Link className="outline-button" href="/contact">Book a visit <span>↗</span></Link></section>
       </main>

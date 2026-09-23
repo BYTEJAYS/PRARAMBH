@@ -3,30 +3,21 @@ import PageFrame from "@/components/PageFrame";
 import IntroOverlay from "@/components/IntroOverlay";
 import BlueprintReveal from "@/components/BlueprintReveal";
 import ParallaxImage from "@/components/ParallaxImage";
-import { galleryImages, projects } from "@/lib/site-data";
+import HybridHero from "@/components/HybridHero";
+import { galleryImages } from "@/lib/site-data";
+import "./old-home.css"; // Ensure old CSS is loaded
 
 export default function Home() {
   return (
     <PageFrame>
       <IntroOverlay />
       <main>
-        <section className="hero" aria-labelledby="hero-title">
-          <ParallaxImage className="hero-image hero-parallax" src="/assets/build3.png" alt="PRARAMBH residential architecture at golden hour" />
-          <div className="hero-shade" />
-          <div className="hero-kicker"><span>01</span> Vadodara, Gujarat</div>
-          <div className="hero-copy">
-            <p className="eyebrow">15+ years of crafting spaces</p>
-            <h1 id="hero-title">Building<br /><em>what lasts.</em></h1>
-            <div className="hero-bottom">
-              <p>Spaces shaped by experience.<br />Built for generations.</p>
-              <Link className="text-link light" href="/projects">Explore our projects <span>↗</span></Link>
-            </div>
-          </div>
-          <div className="scroll-cue"><span /></div>
-        </section>
+        
+        {/* OLD PRARAMBH HERO & CARDS */}
+        <HybridHero />
 
+        {/* REST OF PRARAMBH 2.0 (FROM DOWNWARDS) */}
         <section className="statement section-pad">
-
           <div className="statement-grid">
             <h2>More than<br /><em>15 years</em><br />of experience.</h2>
             <div className="statement-aside"><span className="lotus-mark">✦</span><p>More than a decade and a half of understanding land, people and possibility — translated into places with lasting value.</p></div>
@@ -39,24 +30,11 @@ export default function Home() {
         </section>
 
         <section className="legacy section-pad">
-
           <div className="legacy-top"><h2>Experience gives<br /><em>form to trust.</em></h2><p>Measured not in noise, but in relationships sustained, neighbourhoods shaped and the quiet confidence to keep evolving.</p></div>
-          <div className="stats-row"><div><strong>15<span>+</span></strong><p>Years of<br />experience</p></div><div><strong>1000<span>+</span></strong><p>Clients<br />served</p></div><div><strong>03</strong><p>Documented<br />developments</p></div><div><strong>01</strong><p>Shared<br />standard</p></div></div>
+          <div className="stats-row"><div><strong>15<span>+</span></strong><p>Years of<br />experience</p></div><div><strong>1000<span>+</span></strong><p>Clients<br />served</p></div><div><strong>04</strong><p>Documented<br />developments</p></div><div><strong>01</strong><p>Shared<br />standard</p></div></div>
         </section>
 
-        <section className="featured-projects">
-          <div className="projects-heading section-pad"><h2>Places we’ve<br /><em>imagined and shaped.</em></h2></div>
-          <div className="project-list">
-            {projects.map((project) => (
-              <Link href={`/projects/${project.slug}`} className="project-row" key={project.slug}>
-                <div className="project-photo"><img src={project.hero} alt={`${project.name} architectural render`} /></div>
-                <span className="project-number">{project.accent}</span>
-                <div className="project-title"><p>{project.type}</p><h3>{project.name}</h3></div>
-                <div className="project-meta"><span>{project.location}</span></div>
-              </Link>
-            ))}
-          </div>
-        </section>
+
 
         <BlueprintReveal />
 
